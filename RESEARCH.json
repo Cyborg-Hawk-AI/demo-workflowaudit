@@ -1,0 +1,92 @@
+{
+  "idea": {
+    "name": "WorkflowAudit",
+    "fingerprint": "no-code-automation-workflow-health-audit-report",
+    "pitch": "Automated health audit reports for Make/Zapier/n8n workflows \u2014 catch fragility before it breaks.",
+    "cluster": "Undocumented & unmaintainable automation workflows",
+    "target_customer": "Automation consultants who want to upsell clients, and SMB owners who inherited workflows and want peace of mind",
+    "core_features": [
+      "Connect workflow via API/JSON export and run automated fragility scan",
+      "Scored report: missing error handlers, hardcoded credentials, single points of failure, undocumented steps",
+      "Priority-ranked fix list with plain-English explanations of each risk",
+      "White-label PDF report for consultants to deliver to clients",
+      "Scheduled re-audit with diff report showing what changed since last scan"
+    ],
+    "pricing_model": "Per-report credits + white-label monthly subscription for consultants",
+    "price_point": "$9 per one-time audit report; $99/month for consultants (unlimited audits + white-label branding)",
+    "gtm_channel": "Automation consultant communities, Make.com partner ecosystem, cold email to Upwork/Fiverr automation sellers",
+    "competitive_landscape": "No dedicated workflow auditing tool exists. Consultants currently do this manually or not at all.",
+    "unfair_advantage": "Consultants can use it as a paid deliverable \u2014 the report IS the product they sell to clients, creating a built-in reseller channel",
+    "mvp_estimate": "Next.js + Supabase + OpenAI + PDF generation (Puppeteer); 3 weeks; Make.com API first",
+    "agentic_automation": "Audit jobs are queued serverlessly on workflow upload. LLM scores each node against a rubric. PDF is generated and emailed automatically. Consultants self-serve entirely. Stripe handles all payments. Owner time: under 1 hour/week.",
+    "origin_story": "The r/Entrepreneur thread on 'vibecoded automations' described workflows with 'no error handling, no documentation, no modularity' that broke silently and left clients stranded. Commenters described paying consultants who then disappeared, leaving behind fragile workflows nobody could audit or fix. One person wrote: 'I have no idea if my workflow is one API change away from breaking.' Existing tools (Make's built-in logs, Zapier's task history) show what happened after a failure but don't proactively identify fragility before it occurs.",
+    "automation_playbook": "Workflow JSON is uploaded or pulled via API. A serverless function runs the audit rubric via OpenAI and scores each node. A PDF is generated via Puppeteer and emailed to the user. Stripe webhooks manage credit deductions and subscription state. A weekly cron re-audits subscribed workflows and emails diff reports. Owner time: under 1 hour/week.",
+    "maintenance_hours_per_week": 1,
+    "keywords": [
+      "zapier workflow audit",
+      "make.com automation health check",
+      "no-code workflow review"
+    ],
+    "supporting_urls": [
+      "https://www.reddit.com/r/Entrepreneur/comments/1u97zle/vibecoded_automations_are_becoming_a_real_problem/"
+    ],
+    "weighted_total": 108,
+    "checklist": {
+      "ten_plus_posts_same_pain": true,
+      "paying_for_inferior_solution": true,
+      "reachable_channel": true,
+      "mvp_under_4_weeks": true,
+      "price_point_high_enough": true,
+      "hair_on_fire": true,
+      "can_presell": true,
+      "fewer_than_3_competitors": true,
+      "low_maintenance_ops": true
+    },
+    "checklist_passed": 9,
+    "momentum": "unknown",
+    "rising_queries": [],
+    "gate_result": "passed"
+  },
+  "pain_points": [
+    {
+      "problem": "Market and competitor analysis requires significant manual time and effort to gather keywords, analyze competing content, and structure findings into actionable insights.",
+      "persona": "Digital marketer, content strategist",
+      "current_workaround": "Manually conducting market research and competitor analysis, then manually structuring findings into article outlines",
+      "frequency": "weekly",
+      "wtp_signal": "Uses paid tools like NeuronWriter; assembling teams of AI agents suggests budget allocation",
+      "url": "https://www.reddit.com/r/DigitalMarketing/comments/1uoojg0/whats_one_marketing_task_you_stopped_doing/",
+      "engagement": 0,
+      "source": "reddit"
+    },
+    {
+      "problem": "Tracking long-running AI agents and monitoring their progress is time-consuming and requires manual oversight to prevent failures.",
+      "persona": "AI workflow developer, automation engineer",
+      "current_workaround": "Manually monitoring agents; using Moyai for tracking",
+      "frequency": "daily",
+      "wtp_signal": "Pays for Moyai and other workflow tools; actively seeking solutions",
+      "url": "https://www.reddit.com/r/vibecoding/comments/1uorrnr/ive_started_treating_some_ai_workflows_as/",
+      "engagement": 0,
+      "source": "reddit"
+    },
+    {
+      "problem": "Automated workflows lack proper error handling, causing complete failures when edge cases occur (missing fields, timeouts, API limits), leaving clients unable to troubleshoot and dependent on the original creator.",
+      "persona": "Automation consultant, business process expert",
+      "current_workaround": "Clients remain dependent on automation experts to fix issues; many experts disappear leaving clients stranded",
+      "frequency": "unknown",
+      "wtp_signal": "Clients are paying for automation services but experiencing costly failures",
+      "url": "https://www.reddit.com/r/Entrepreneur/comments/1u97zle/vibecoded_automations_are_becoming_a_real_problem/",
+      "engagement": 0,
+      "source": "reddit"
+    },
+    {
+      "problem": "Automated workflows are built without proper documentation, modularity, or clear logic explanation, making it impossible for others to understand, maintain, or debug them when issues arise.",
+      "persona": "Business owner, automation client",
+      "current_workaround": "Hiring automation experts who create undocumented, non-modular solutions; stuck with broken workflows when creators disappear",
+      "frequency": "unknown",
+      "wtp_signal": "Paying for automation services but receiving poor quality deliverables",
+      "url": "https://www.reddit.com/r/Entrepreneur/comments/1u97zle/vibecoded_automations_are_becoming_a_real_problem/",
+      "engagement": 0,
+      "source": "reddit"
+    }
+  ]
+}
